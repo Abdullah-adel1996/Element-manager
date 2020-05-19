@@ -1,0 +1,31 @@
+@import "~antd/dist/antd.css"; 
+
+.editable-cell {
+ position: relative;
+}
+
+.editable-cell-value-wrap {
+ padding: 5px 12px;
+ cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+ border: 1px solid #d9d9d9;
+ border-radius: 4px;
+ padding: 4px 11px;
+}
+
+[data-theme='dark'] .editable-row:hover .editable-cell-value-wrap {
+ border: 1px solid #434343;
+}
+
+#components-table-demo-drag-sorting tr.drop-over-downward td {
+ border-bottom: 2px dashed #1890ff;
+}
+
+#components-table-demo-drag-sorting tr.drop-over-upward td {
+ border-top: 2px dashed #1890ff;
+}
+
+
+

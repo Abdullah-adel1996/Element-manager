@@ -132,9 +132,6 @@ const DragableBodyRow = ({ index, moveRow, className, style, ...Props }) => {
     );
   };
 
-
-
-
 class ElementTable extends React.Component {
   constructor(props) {
     super(props);
@@ -167,8 +164,8 @@ class ElementTable extends React.Component {
           //   key: 'outlet',
           // },
       {
-        title: 'operation',
-        dataIndex: 'operation',
+       // title: 'operation',
+        dataIndex: 'operation', 
         width: '5%', 
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
@@ -179,6 +176,8 @@ class ElementTable extends React.Component {
       },
     ];
     this.state = {
+      selectedRowKeys: [],
+
       dataSource: [
         {
           key: '0',
@@ -324,15 +323,35 @@ class ElementTable extends React.Component {
     );
   };
  
+  selectRow = (record) => {
+    const selectedRowKeys = [...this.state.selectedRowKeys];
+    if (selectedRowKeys.indexOf(record.key) >= 0) {
+      selectedRowKeys.splice(selectedRowKeys.indexOf(record.key), 1);
+    } else {
+      selectedRowKeys.push(record.key);
+      selectedRowKeys.splice(1, 1);
+    }
+    this.setState({ selectedRowKeys});
+    console.log(selectedRowKeys)
+    console.log(record.key)
+    console.log(selectedRowKeys.indexOf(record.key))
+
+  }
+  onSelectedRowKeysChange = (selectedRowKeys) => {
+    this.setState({ selectedRowKeys });
+  }
   
   render() {
     
-    const { dataSource } = this.state;
+    const { dataSource,selectedRowKeys } = this.state;
 
     const rowSelection = {
-    onSelect: (selectedRowKeys, selectedRows) => {
-    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-    },
+      type: 'radio',
+      selectedRowKeys,
+      onChange: this.onSelectedRowKeysChange,
+      onSelect: (selectedRowKeys, selectedRows) => {
+        console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+        },
     };
 
     const columns = this.columns.map(col => {
@@ -366,12 +385,15 @@ class ElementTable extends React.Component {
               columns={columns}
               onRow={(record, index) => ({
               index,
+              onClick: () => {
+                this.selectRow(record);
+              },
               moveRow: this.moveRow,
               })}
               pagination={false}
               size="middle"
               />
-        </DndProvider> 
+        </DndProvider>  
             <br/>
             <Button
             onClick={this.handleAdd}

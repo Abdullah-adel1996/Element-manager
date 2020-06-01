@@ -1,5 +1,9 @@
 @import "~antd/dist/antd.css"; 
 
+
+html {
+  font-size: 62.5%;
+}
 .editable-cell {
  position: relative;
 }
@@ -27,5 +31,37 @@
  border-top: 2px dashed #1890ff;
 }
 
+.grid {
+    display: grid;
+   /* grid-template-columns: repeat(3, 1fr);*/
+   grid-template-columns: 3fr 2fr 2fr;
 
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
 
+.grid > div {
+    padding: 8px 4px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 15px;
+  }
+
+  .ant-card-grid:focus {
+    outline-color: #1890ff;
+  }
+
+  

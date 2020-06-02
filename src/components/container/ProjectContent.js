@@ -23,14 +23,14 @@ const ProjectContent = () => {
 
     return (
     <React.Fragment>
-       <Row style={{justifyContent:'center',  marginBottom:'1rem'}}>
-            <Card style={{width:'80%', marginTop:'2rem'}}>
+       <Row style={{justifyContent:'center',  marginBottom:'1rem', marginLeft:'5px', marginRight:'5px'}}>
+            <Card style={{width:'100%', marginTop:'2rem'}}>
             <h4 style={{marginTop:'-3.5rem', backgroundColor:'#fff', display:'table'}}>Description</h4>
                     <br/><br/><br/><br/><br/><br/>
             </Card>
         </Row>
-       <Row style={{justifyContent:'center', marginBottom:'1rem', marginTop:'2rem'}}>
-        <Card style={{width:'80%'}}>
+       <Row style={{justifyContent:'center', marginBottom:'1rem', marginTop:'2rem', marginLeft:'5px', marginRight:'5px'}}>
+        <Card style={{width:'100%'}}>
         <h4 style={{marginTop:'-3.5rem', backgroundColor:'#fff', display:'table'}}>Picture</h4>
 
             <Upload {...props}>
@@ -38,6 +38,7 @@ const ProjectContent = () => {
                 <UploadOutlined /> Add Picture
                 </Button>
             </Upload>
+            <br/>
         </Card>
         </Row>
     </React.Fragment>

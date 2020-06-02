@@ -7,29 +7,28 @@ const FluidContent = () => {
 
     const selectStyle = {
         display:'block',
-        width:'12rem',
-        margin:'1rem'
+        width:'100%',
+        margin:'5px'
       };
     return (
              <Col>
-                <Row style={{justifyContent:'center'}}>
-                    <Select defaultValue="Fluid type" style={selectStyle}>
+                <Row>
+                    <Select defaultValue="Fluid Type" style={selectStyle}>
                         <Option value="oneval">One value</Option>
                         <Option value="multival">Multi value</Option>
                         <Option value="torf">T or F</Option>
                     </Select>
-               
             </Row>
-            <Row style={{justifyContent:'center'}}>
-                <Select defaultValue="Fluid name" style={selectStyle}  >
+            <Row>
+                <Select defaultValue="Fluid Name" style={selectStyle}  >
                     <Option value="oneval">One value</Option>
                     <Option value="multival">Multi value</Option>
                     <Option value="torf">T or F</Option>
                 </Select>
             </Row> 
-            <Row style={{justifyContent:'center', marginBottom:'1rem'}}>
-                <Card style={{width:'80%', marginTop:'1.5rem'}}>
-                    <h4 style={{marginTop:'-3.7rem', backgroundColor:'#fff', display:'table'}}>properties</h4>
+            <Row style={{justifyContent:'center', marginBottom:'1rem', marginLeft:'5px', marginRight:'5px'}}>
+                <Card style={{width:'100%', marginTop:'1.5rem'}}>
+                    <h4 style={{marginTop:'-3.7rem', backgroundColor:'#fff', display:'table'}}>Properties</h4>
                 <br/><br/><br/><br/><br/><br/>
 
                 </Card>

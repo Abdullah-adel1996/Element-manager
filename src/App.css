@@ -64,7 +64,7 @@ table, td, th {
     outline-color: #1890ff;
   }
 
-  .header {
+  .heade {
     background-image: linear-gradient(to bottom right, #0060a7, #6087ED);
   }
 
@@ -77,4 +77,9 @@ table, td, th {
   }
   .ant-card-head-title {
     padding: 1rem;
+  }
+
+  .ant-col-18 {
+    flex:0 0 78%;
+    max-width: 78%;
   }

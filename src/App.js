@@ -36,7 +36,7 @@ const App = () => {
 
   
   return (
-    <div style={{margin:'1rem'}}>
+    <div style={{margin:'5px'}}>
       <Header/>
       <MainTabs/>
     </div>

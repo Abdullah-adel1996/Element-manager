@@ -88,7 +88,7 @@ const FileTabItems = () => {
                 </RibbonGroup>
             </Ribbon>
         <Row style={{marginTop:'1.5rem'}}>
-             {content}
+                {content}
             <Col span={18} style={{marginLeft:'1rem'}}>
                  <Tabs onChange={callback} type="card">
                      <TabPane tab="Network" key="1">

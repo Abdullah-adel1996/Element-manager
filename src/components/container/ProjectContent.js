@@ -23,13 +23,16 @@ const ProjectContent = () => {
 
     return (
     <React.Fragment>
-       <Row style={{justifyContent:'center', marginTop:'1rem', marginBottom:'1rem'}}>
-            <Card style={{width:'80%'}} title="Description">
+       <Row style={{justifyContent:'center',  marginBottom:'1rem'}}>
+            <Card style={{width:'80%', marginTop:'2rem'}}>
+            <h4 style={{marginTop:'-3.5rem', backgroundColor:'#fff', display:'table'}}>Description</h4>
                     <br/><br/><br/><br/><br/><br/>
             </Card>
         </Row>
-       <Row style={{justifyContent:'center', marginBottom:'1rem'}}>
-        <Card style={{width:'80%'}} title="Picture">
+       <Row style={{justifyContent:'center', marginBottom:'1rem', marginTop:'2rem'}}>
+        <Card style={{width:'80%'}}>
+        <h4 style={{marginTop:'-3.5rem', backgroundColor:'#fff', display:'table'}}>Picture</h4>
+
             <Upload {...props}>
                 <Button>
                 <UploadOutlined /> Add Picture

@@ -64,4 +64,17 @@ table, td, th {
     outline-color: #1890ff;
   }
 
-  
+  .header {
+    background-image: linear-gradient(to bottom right, #0060a7, #6087ED);
+  }
+
+  .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+    color: #0060a7 ;
+  }
+
+  .ant-card-head {
+    font-size: 1.5rem;
+  }
+  .ant-card-head-title {
+    padding: 1rem;
+  }

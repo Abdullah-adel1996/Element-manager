@@ -4,25 +4,28 @@ import { FileOutlined,
      SaveOutlined, 
      BorderOuterOutlined, 
      UndoOutlined, 
-     RedoOutlined } from '@ant-design/icons';
+     RedoOutlined, 
+     FileFilled,
+     SaveFilled,
+     FolderOpenFilled,
+     BookFilled} from '@ant-design/icons';
 import {PageHeader, Row, Col} from 'antd'
-
 
 const Header = () => {
     return (  
 
-    <Row style={{alignItems:'center'}}>
+    <Row className='header' style={{alignItems:'center', backgroundColor:'#0060a7'}}>
         <Col span={3}>
-            SIDLAB 5.0
+            <h3 style={{color:'#fff', marginLeft:'1rem', marginTop:'2px'}}> SIDLAB 5.0 </h3>
         </Col>
         <Col span={7} offset={1}>
-            <FileOutlined style={{fontSize:'4rem', marginRight:'1rem'}}/>
-            <FolderOpenOutlined style={{fontSize:'4rem', marginRight:'1rem'}} />
-            <SaveOutlined style={{fontSize:'4rem', marginRight:'1rem'}} />
-            <BorderOuterOutlined style={{fontSize:'4rem', marginRight:'1rem'}} />
-            <BorderOuterOutlined style={{fontSize:'4rem', marginRight:'1rem'}} />
-            <UndoOutlined style={{fontSize:'4rem', marginRight:'1rem'}}/>
-            <RedoOutlined style={{fontSize:'4rem'}}/>
+            <FileFilled style={{fontSize:'1.7rem', color:'#fff', marginRight:'1rem', cursor:'pointer'}}/>
+            <FolderOpenFilled style={{fontSize:'1.7rem', color:'#fff', marginRight:'1rem', cursor:'pointer'}} />
+            <SaveFilled style={{fontSize:'1.7rem', color:'#fff', marginRight:'1rem', cursor:'pointer'}} />
+            <BookFilled style={{fontSize:'1.7rem', color:'#fff', marginRight:'1rem', cursor:'pointer'}} />
+            <BookFilled style={{fontSize:'1.7rem', color:'#fff', marginRight:'1rem', cursor:'pointer'}} />
+            <UndoOutlined style={{fontSize:'1.7rem', color:'#fff', marginRight:'1rem', cursor:'pointer'}}/>
+            <RedoOutlined style={{fontSize:'1.7rem', color:'#fff', cursor:'pointer'}}/>
         </Col>
     </Row>     
     )

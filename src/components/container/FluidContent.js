@@ -7,7 +7,7 @@ const FluidContent = () => {
 
     const selectStyle = {
         display:'block',
-        width:'20rem',
+        width:'12rem',
         margin:'1rem'
       };
     return (
@@ -28,13 +28,13 @@ const FluidContent = () => {
                 </Select>
             </Row> 
             <Row style={{justifyContent:'center', marginBottom:'1rem'}}>
-                <Card style={{width:'80%'}} title="Properties">
+                <Card style={{width:'80%', marginTop:'1.5rem'}}>
+                    <h4 style={{marginTop:'-3.7rem', backgroundColor:'#fff', display:'table'}}>properties</h4>
                 <br/><br/><br/><br/><br/><br/>
 
                 </Card>
-            </Row>
-                    
-                </Col>
+            </Row>         
+        </Col>
                 
     )
 }

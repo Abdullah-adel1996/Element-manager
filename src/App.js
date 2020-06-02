@@ -1,24 +1,54 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import MainTabs from './components/container/MainTabs';
 import Console from './components/container/Console';
-import "./App.css";
 import Header from './components/container/Header';
-
-
-
+import { Row, Col } from 'antd';
+import TableHeader from './components/elements-table/TableHeader';
+import TableRow from './components/elements-table/TableRow';
+import "./App.css";
 
 
 
 const App = () => {
 
+  const tableData = [
+    { 
+      id: 0, 
+      propName: 'Area', 
+      defaultValue: {
+      oneval: 'One Value',
+      multival: 'Multi Value',
+      torf: 'T or F'
+    }, 
+     selectedval: 'One Value'},
+    { 
+      id: 1, 
+      propName: 'Diameter', 
+      defaultValue: {
+      oneval: 'One Value',
+      multival: 'Multi Value',
+      torf: 'T or F'
+    }, 
+    selectedval: 'Multi Value'}
+  ]
+
+  const [data, setData] = useState(tableData)
+
   
   return (
     <div style={{margin:'1rem'}}>
       <Header/>
-      <br/>
       <MainTabs/>
-      <Console/>
     </div>
+
+    // <Row style={{margin:'1rem'}}>
+    //   <Col span={13}>
+    //      <TableHeader/>
+    //      <TableRow data={data}/>
+    //   </Col>
+      
+    // </Row>
+    
       
   )
 }

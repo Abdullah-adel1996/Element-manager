@@ -13,7 +13,7 @@ const MainTabs = () => {
     }
 
     return (
-        <Tabs onChange={callback} type="card">
+        <Tabs onChange={callback} type="card" style={{marginTop:'1rem'}}>
             <TabPane tab="File" key="1">
                  <FileTabItems/>
             </TabPane>

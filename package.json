@@ -9,6 +9,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.2.4",
+    "array-move": "^2.2.2",
     "bootstrap": "^4.5.0",
     "immutability-helper": "^3.0.2",
     "react": "^16.13.1",
@@ -18,10 +19,18 @@
     "react-dnd-html5-backend": "^10.0.2",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
+    "react-reorder": "^3.0.0-alpha.7",
+    "react-resize-panel": "^0.3.5",
+    "react-resizer": "^0.2.0",
     "react-scripts": "3.4.1",
+    "react-simple-resizer": "^2.1.0",
+    "react-sortable-hoc": "^1.11.0",
+    "react-split": "^2.0.7",
+    "react-split-pane": "^0.1.91",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "use-media": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

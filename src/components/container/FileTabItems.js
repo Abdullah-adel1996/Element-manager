@@ -5,8 +5,8 @@ import ProjectContent from './ProjectContent';
 import Console from './Console';
 import { Ribbon, RibbonGroup, RibbonGroupItem, RibbonButton } from "react-bootstrap-ribbon";
 import { SaveFilled, FileTextOutlined, DatabaseOutlined, FolderViewOutlined } from '@ant-design/icons';
-import "bootstrap/dist/css/bootstrap.css";
-import "react-bootstrap-ribbon/dist/react-bootstrap-ribbon.css";
+import ResizePanel from "react-resize-panel";
+import Ribbons from './Ribbons';
 
 
 const FileTabItems = () => {
@@ -21,16 +21,13 @@ const FileTabItems = () => {
 
       let content = null;
         if(contentNum==1) {
-            content = <Col span={5} style={{border:'0.5px solid #ddd', height:'100%'}}>
-                        <FluidContent/>
-                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    </Col>
+            content = <div style={{border:'0.5px solid #ddd', height:'100vh', width:'100%'}}>
+                            <FluidContent/>
+                     </div>
         } else if (contentNum==2) {
-            content = <Col span={5} style={{border:'0.5px solid #ddd', height:'100%'}}>
-                        <ProjectContent/>
-                        <br/><br/><br/><br/><br/>
-                    </Col>
-        }
+            content = <div style={{border:'0.5px solid #ddd', height:'100vh', width:'100%'}}>
+                         <ProjectContent/>
+                    </div> }
 
     const { TabPane } = Tabs;
 
@@ -41,7 +38,59 @@ const FileTabItems = () => {
 
     return (
         <div style={{marginTop:'-1.5rem'}}>
-            <Ribbon breakpoint="lg" height="9rem">
+
+          
+            <Ribbons handleClick={handleClick}/>
+        <Row style={{marginTop:'5px', flexWrap:'nowrap'}}>
+        <ResizePanel direction="e" style={{width:'16%'}}>
+                {content}
+         </ResizePanel>
+            <div style={{marginLeft:'1rem' ,width:'83.27%'}}>
+                 <Tabs onChange={callback} type="card">
+                     <TabPane 
+                     tab="Network" 
+                     key="1"
+                     style={{
+                        marginTop:'-1.6rem',
+                        borderLeft:'1px solid #f0f0f0'
+                       }} >
+                         <div style={{height:'80.55vh'}}>
+                         Content of Tab Pane 1
+                         </div>
+                     </TabPane>
+                     <TabPane 
+                     tab="Graph" key="2"
+                     style={{
+                        borderLeft:'1px solid #f0f0f0'
+                       }}>
+                         <div style={{height:'80.55vh'}}>
+                         Content of Tab Pane 2
+                         </div>
+                    </TabPane>
+                     <TabPane 
+                     tab="CAD Viewer" key="3"
+                     style={{
+                        borderLeft:'1px solid #f0f0f0'
+                       }}>
+                          <div style={{height:'80.55vh'}}>
+                         Content of Tab Pane 3
+                         </div>
+
+                    </TabPane>
+                 </Tabs>
+                 <Console/>
+            </div>
+          
+        </Row>
+        
+        </div>
+    )
+}
+
+export default FileTabItems
+
+
+{/* <Ribbon breakpoint="lg" height="9rem">
                 
                 <RibbonGroup title="Section.1" colClass="col-2">
                     <RibbonGroupItem colClass="col-6">
@@ -85,28 +134,4 @@ const FileTabItems = () => {
                     </RibbonGroupItem>
 
                 </RibbonGroup>
-            </Ribbon>
-        <Row style={{marginTop:'5px'}}>
-                {content}
-            <Col span={18} style={{marginLeft:'1rem'}}>
-                 <Tabs onChange={callback} type="card">
-                     <TabPane tab="Network" key="1">
-                         Content of Tab Pane 1
-                         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                     </TabPane>
-                     <TabPane tab="Graph" key="2">
-                         Content of Tab Pane 2
-                         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                    </TabPane>
-                     <TabPane tab="CAD Viewer" key="3">
-                          Content of Tab Pane 3
-                          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                    </TabPane>
-                 </Tabs>
-                 <Console/>
-            </Col>
-
-        </Row>
-        </div>
-    )
-}
-
-export default FileTabItems
+            </Ribbon> */}
